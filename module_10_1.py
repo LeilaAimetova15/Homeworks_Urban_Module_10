@@ -3,7 +3,7 @@ import time
 import threading
 # Объявление функции write_words
 def write_words(word_count, file_name):
-    file = open(file_name, 'a', encoding='utf-8')
+    file = open(file_name, 'w', encoding='utf-8')
     for i in range(word_count):
         file.write(f'Какое-то слово № {i + 1}\n')
         time.sleep(0.1)
