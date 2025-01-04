@@ -27,8 +27,10 @@ class Cafe:
             for i in range(len(self.tables)):
                 if self.tables[i].guest is None: #проверка значения на None
                     self.tables[i].guest = guest
+                    guest.start()
                     guest_sat_down = True
                     print(f'{guest.name} сел(-а) за стол номер {self.tables[i].number}')
+                    break
             if not guest_sat_down:
                 self.queue.put(guest)
                 print(f'{guest.name} в очереди')
